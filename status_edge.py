@@ -36,7 +36,10 @@ class Home(BehaviorDec):
         btn.setText("Online")
 
     def __init__(self):
-        self._brush = Brush(setColor=Color("green"), setStyle=Qt.BrushStyle.SolidPattern)
+        self._brush = Brush(
+            setColor=Color("green"), 
+            setStyle=Qt.BrushStyle.SolidPattern
+        )
 
         return VLayout(
             children=[
@@ -49,6 +52,7 @@ class Home(BehaviorDec):
                 StatusEdgePaint(
                     uid="status_paint",
                     brush=self._brush,
+                    style=StatusEdgePaint.Style.rectangle,
                     child=PushButton(
                         uid="status_btn",
                         text="Online"
