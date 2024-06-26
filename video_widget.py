@@ -24,8 +24,7 @@ class Window(BehaviorDec):
     def __init__(self):
         return MainWindow(
             methods=[("resize", Args(800, 600))],
-            home=VideoWidget(
-                setFixedSize=Args(400, 400),
+            child=VideoWidget(
                 player=MediaPlayer(
                     setLoops = -1,
                     setSource = self._get_video_file(),

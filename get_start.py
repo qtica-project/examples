@@ -31,7 +31,7 @@ class Window(BehaviorDec):
             events = [
                 ("mousePress", lambda _: self.update_background())
             ],
-            home=Label(
+            child=Label(
                 uid="label",
                 setText=f"Hello {os.environ.get('USER', '')}, Welcome to Qtica.<br>Click me!",
                 setTextFormat=Qt.TextFormat.RichText,

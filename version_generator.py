@@ -91,7 +91,7 @@ class Window(BehaviorDec):
             methods = [
                 ("resize", QSize(500, 150))
             ],
-            home=Home()
+            child=Home()
         )
 
 

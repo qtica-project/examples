@@ -50,7 +50,7 @@ class Window(BehaviorDec):
             methods = [
                 ("resize", QSize(400, 200))
             ],
-            home=Label(
+            child=Label(
                 uid="label",
                 setText=f"Hello {os.environ.get('USER', '')}, Welcome to Qtica.<br>Click me!",
                 setTextFormat=Qt.TextFormat.RichText,

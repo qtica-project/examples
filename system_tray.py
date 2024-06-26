@@ -16,23 +16,23 @@ def get_user_name() -> str:
 
 app = Application(sys.argv)
 sys_tray = SystemTray(
-    setIcon=Icon.fromTheme("qt"),
+    setIcon=Icon("assets/logo.png"),
     setToolTip="Test Qtica Tray",
     setContextMenu=Menu(
         children=[
             Action(
-                setIcon=Icon.fromTheme("firefox"),
-                setText="Firefox",
-                triggered=lambda: print("Hi, I'm Firefox")
+                setIcon=Icon.fromTheme("browser"),
+                setText="Web Browser",
+                triggered=lambda: print("Hi, I'm Browser!")
             ),
             Action(
-                setIcon=Icon.fromTheme("python"),
-                setText="Python",
-                triggered=lambda: print("Hi, I'm Python")
+                setIcon=Icon("assets/logo.png"),
+                setText="Qtica Tool Kit",
+                triggered=lambda: print("Hi, I'm Qtica!")
             ),
             MenuSeparatorWrapper(),
             MenuAction(
-                text="What's My name!?",
+                text="What's My name?!",
                 icon=Icon.fromTheme("user"),
                 callback=lambda: print(f"Your name is '{get_user_name()}'")
             ),
@@ -46,4 +46,4 @@ sys_tray = SystemTray(
 )
 
 sys_tray.show()
-app.run()
+app.run(True)

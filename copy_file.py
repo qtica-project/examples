@@ -47,7 +47,7 @@ class Window(BehaviorDec):
         return MainWindow(
             uid = "window",
             windowTitle="Copy Progress Example",
-            home=VLayout(
+            child=VLayout(
                 children=[
                     FormLayout(
                         children=[

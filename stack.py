@@ -9,7 +9,7 @@ from PySide6.QtCore import QSize
 class Window(BehaviorDec):
     def __init__(self):
         return MainWindow(
-            home=StackedLayout(
+            child=StackedLayout(
                 setStackingMode = StackedLayout.StackingMode.StackAll,
                 children=[
                     Label(

@@ -66,7 +66,7 @@ class Window(BehaviorDec):
     def __init__(self) -> None:
         return MainWindow(
             uid="window",
-            home=Home()
+            child=Home()
         )
 
 

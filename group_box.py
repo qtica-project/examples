@@ -20,7 +20,7 @@ from Qtica.widgets import (
 class Window(BehaviorDec):
     def __init__(self):
         return MainWindow(
-            home=GroupBox(
+            child=GroupBox(
                 setTitle="Appointment Details",
                 setFlat=True,
                 child=VLayout(
